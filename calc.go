@@ -29,5 +29,7 @@ func main() {
 		fmt.Println(multiplication(firstNum, secondNum))
 	case "divide":
 		fmt.Println(division(firstNum, secondNum))
+	default:
+		fmt.Println("No operation provided")
 	}
 }
