@@ -6,4 +6,4 @@ multiplication and division. The program takes 3 command line arguments, like so
 
 This program allows for Float64 numbers so all major calculations can be performed.
 
-Completed on day 9/100 in my "100 Days of Go".
+Completed on day 10/100 in my "100 Days of Go".

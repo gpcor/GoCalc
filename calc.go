@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"strconv"
-	"strings"
 )
 
 func main() {
@@ -13,27 +12,22 @@ func main() {
 
 	firstNum, err := strconv.ParseFloat(calcArguments[1], 64)
 	if err != nil {
-		log.Fatal("Error:", err)
+		log.Fatal("Error: ", err)
 	}
 
 	secondNum, err := strconv.ParseFloat(calcArguments[2], 64)
 	if err != nil {
-		log.Fatal("Error:", err)
+		log.Fatal("Error: ", err)
 	}
 
-	operation := calcArguments[3]
-
-	if strings.Contains(operation, "add") {
+	switch operation := calcArguments[3]; operation {
+	case "add":
 		fmt.Println(addition(firstNum, secondNum))
-	}
-
-	if strings.Contains(operation, "subtract") {
+	case "subtract":
 		fmt.Println(subtraction(firstNum, secondNum))
-	}
-	if strings.Contains(operation, "multiply") {
+	case "multiply":
 		fmt.Println(multiplication(firstNum, secondNum))
-	}
-	if strings.Contains(operation, "divide") {
+	case "divide":
 		fmt.Println(division(firstNum, secondNum))
 	}
 }
